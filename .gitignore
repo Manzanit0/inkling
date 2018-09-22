@@ -1,0 +1,11 @@
+# Node Stuffs
+node_modules
+
+# VS Code stuffs
+.vscode
+
+# Mac stuffs
+.DS_Store
+
+# Compiled code
+dist/
