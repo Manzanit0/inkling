@@ -1,11 +1,14 @@
-/// <reference path="./components/CreatePostForm.tsx" />
+/// <reference path="./components/posts/PostEditForm.tsx" />
 
 class App extends React.Component {
-    render() {
+    constructor(props){
+        super(props);
+    }
+
+    public render() {
         return (
             <div>
-                <p>Inkling!</p>
-                <CreatePostForm />
+                <PostEditForm />
             </div>
         );
     }
