@@ -12,14 +12,14 @@ class PostEditForm extends React.Component<any, any> {
         };
     }
 
-    public handleChange(event: any): void {
+    handleChange = (event: any): void => {
         var obj = {};
         obj[event.target.name] = event.target.value;
         this.setState(obj);
         this.storage.setItem(event.target.name, event.target.value);
     }
 
-    render() {
+    public render() {
         return (
             <div className="card mx-auto" style={{ width: "95%", marginTop: "2.5%" }}>
                 <form>
@@ -31,14 +31,14 @@ class PostEditForm extends React.Component<any, any> {
                                 label="Title"
                                 placeholder="Some random title"
                                 text={this.state.PostTitle}
-                                handleChange={this.handleChange.bind(this)}
+                                handleChange={this.handleChange}
                             />
                             <TextAreaInput
                                 name="PostBody"
                                 label="Content"
                                 placeholder="Type here pls!"
                                 text={this.state.PostBody}
-                                handleChange={this.handleChange.bind(this)}
+                                handleChange={this.handleChange}
                             />
                         </div>
                     </div>
